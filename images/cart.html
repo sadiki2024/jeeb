@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tech2etc Ecommerce Tutorial</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <link rel="stylesheet" href="style.css">
+
+       
+       
+        <script>
+            function validateInput(input) {
+                var regex = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
+                return input.replace(regex, "");
+            }
+    
+            function handleSubmit(event) {
+                event.preventDefault();
+                var userInput = document.getElementById("userInput").value;
+                var sanitizedInput = validateInput(userInput);
+                document.getElementById("output").innerText = sanitizedInput;
+            }
+        </script>
+    </head>
+    <body>
+    
+<section id="header">
+    <a href="#"><img src="images/logo." class="logo"></a>
+    <div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li id="lg-bag"><a class="active" href="cart.html"><i class="fa-sharp fa-solid fa-xmark"></i></a></li>
+            <a href="#" id="close"><i class="far fa-times"></i></a>
+        </ul>
+    </div>
+    <div id="mobile">
+        <a href="cart.html"><i class=" fa-solid fa-bag-shopping"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+       
+    </div>
+
+    
+</section>
+
+<section id="page-header" class="about-header">
+
+    <h2>#let's_talk</h2>
+    <p>LEAVA A MESSAGE, WE love to hear from you!</p>
+    
+
+    </section>
+    <section id="feature" class="section-p1"> 
+        <div class="fe-box">
+            <img src="images/NIKE1.png" alt="">   
+            <h6>free shipping</h6>
+        </div>
+         <div class="fe-box">
+            <img src="images/NIKE2.jpg" alt="">
+           
+            <h6>free shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/NIKE3.jpg" alt="">
+           
+            <h6>free shipping</h6>
+        </div>
+        <div class="fe-box">
+            
+            <img src="images/NIKE4.jpg" alt="">
+            <h6>free shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/NIKE5.jpg" alt="">
+            <h6>free shipping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="images/NIKE8.jpg" alt="">
+            <h6>free shipping</h6>
+        </div>
+    </section>
+    <!--section-feature end-->ion>
+ 
+   
+
+
+
+
+<script >
+     const bar = document.getElementById('bar');
+    const close = document.getElementById('close');
+    const nav = document.getElementById('navbar');
+
+    if (bar) {
+       bar.addEventListener('click', () => {
+           nav.classList.add('active');
+
+
+       })
+     }
+
+
+
+     if (close) {
+       close.addEventListener('click', () => {
+           nav.classList.remove('active');
+
+
+       })
+     }
+</script>
+
+
+   
+</body>
+
+</html>
